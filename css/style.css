@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav area */
+
+header {
+    background-color: #262626;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.navbarT {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menuu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbrandingg {
+    font-size: 2rem;
+}
+
+.nav-linkk {
+    transition: 0.7s ease;
+}
+
+.nav-linkk:hover {
+    color: red;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+#hero-section {
+    background: url(https://i.postimg.cc/2SY5DYVR/background.png), url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+#first-section {
+    min-height: 100vh !important;
+}
+
+.first-pic {
+    background: url(../img/about.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+#second-section {
+    min-height: 100vh !important;
+}
+
+.truck img {
+    width: 4em !important;
+    height: 2em !important;
+    margin: 1em 0 0 4em;
+}
+
+.hello {
+    height: 1.6rem !important;
+    width: 1.4rem;
+    padding: 4px;
+  }
+
+  .icon {
+    height: 2rem;
+  }
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menuu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-itemm {
+        margin: 16px 0;
+    }
+
+    .nav-menuu.active{
+        left: 0;
+    }
+}
